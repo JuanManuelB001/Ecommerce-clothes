@@ -12,6 +12,27 @@
     transition: transform 0.8s ease;
 }
 
+.card-img{
+    text-decoration: none;
+    color: black;
+
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px 10px;
+    padding: 10px auto;
+
+}
+
+.card-info{
+    width: 70%;
+    background-color: aqua;
+    margin: 10px 0;
+    padding: 15px auto;
+}
+
 .size-list:hover{
     transform: scale(1.1);
 }
