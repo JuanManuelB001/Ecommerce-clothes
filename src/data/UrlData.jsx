@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export function UrlData({ path }) {
   const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([])
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -11,16 +12,17 @@ export function UrlData({ path }) {
             console.log("Error peticion.")
           }
           const data = await response.json()
-          console.log(`Los Datos del Servidor son:`)
-          console.log(data)
+          setData(data);
+        
       } catch (error) {
         console.log(`Error: ${error}`);
       } finally {
         setLoading(false);
+        
       }
     };
     // LLAMAR A LA FUNCION
     fetchData();
   }, []);
-  return <div>{loading && <p>consultando API...</p>}</div>;
+  return( data);
 }

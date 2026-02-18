@@ -4,11 +4,10 @@ import viteLogo from '/vite.svg'
 
 import { UrlData } from './data/UrlData'
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      
     </>
   )
 }
