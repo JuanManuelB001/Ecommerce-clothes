@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 
 export function UrlData({ path }) {
-  const [loading, setLoading] = useState(false);
   const [data, setData] = useState([])
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
       try {
         const response = await fetch(`https://devsapihub.com/api-ecommerce/`)
           if(!response.ok){
@@ -17,7 +15,6 @@ export function UrlData({ path }) {
       } catch (error) {
         console.log(`Error: ${error}`);
       } finally {
-        setLoading(false);
         
       }
     };

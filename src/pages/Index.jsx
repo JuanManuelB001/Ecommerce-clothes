@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { UrlData } from "../data/UrlData";
+import { Card } from "../components/Card";
 
+export function Index() {
+  const [data, setData] = useState();
 
-export function Index({props}){
-    const [data, setData] = useState(props)
-    const dato = UrlData("")
-
-    console.log(dato)
-    return(
-        <div>
-            index page
-        </div>
-    );
+  const urlData = UrlData("");
+  return (
+    <div>
+      index page
+      <Card props={urlData} />
+    </div>
+  );
 }
